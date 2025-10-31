@@ -6,7 +6,12 @@
     <title>Md. Abdur Rakib | Computer Science Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-    <style>
+
+
+<style> 
+
+
+
 
  /* ===================================
            GLOBAL RESET & BASE STYLES
@@ -47,9 +52,9 @@
             --white: #ffffff;
             
             /* Glass Effect Variables */
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: rgba(31, 38, 135, 0.15);
+            --glass-bg: rgba(245, 240, 240, 0.1);
+            --glass-border: rgba(253, 231, 231, 0.2);
+            --glass-shadow: rgba(37, 44, 139, 0.15);
             
             /* Spacing Variables */
             --spacing-xs: 8px;
@@ -91,7 +96,7 @@
             font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.7;
             color: var(--dark-primary);
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            background: linear-gradient(135deg, #f7f7f9 0%, #eaecf0 100%);
             background-attachment: fixed;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -128,19 +133,21 @@
       /* Target all main sections except header */
        section:not(header) {
      position: relative;
-     background: rgba(255, 255, 255, 0.08);
+     background: rgba(253, 251, 251, 0.08);
      backdrop-filter: blur(25px) saturate(180%);
      -webkit-backdrop-filter: blur(25px) saturate(180%);
      border-radius: 20px;
      border: 1px solid rgba(255, 255, 255, 0.25);
      box-shadow:
-         0 0 35px rgba(0, 180, 255, 0.2),
+         0 0 35px rgba(3, 175, 248, 0.2),
     inset 0 0 20px rgba(255, 255, 255, 0.05);
      overflow: hidden;
     transition: background 1s ease, box-shadow 1s ease, border 0.6s ease;
      margin: 20px auto;
      padding: 30px 0;
      max-width: 1400px;
+
+    padding: var(--spacing-xl) 0;
 }
 
 /* Animated colorful shimmer overlay */
@@ -152,8 +159,8 @@ section:not(header)::before {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at 30% 30%,
-      rgba(200, 239, 250, 0.18) 0%,
-      rgba(120, 100, 255, 0.12) 30%,
+      rgba(187, 235, 248, 0.18) 0%,
+      rgba(117, 98, 239, 0.12) 30%,
       transparent 70%);
   animation: glassFloat 18s ease-in-out infinite;
   opacity: 0.6;
@@ -167,21 +174,21 @@ section:not(header)::after {
   inset: 0;
   border-radius: 20px;
   background: linear-gradient(135deg,
-      rgba(166, 236, 255, 0.25),
+      rgba(156, 231, 252, 0.25),
       rgba(120, 80, 255, 0.2),
-      rgba(146, 255, 231, 0.25),
-      rgba(255, 255, 255, 0.05));
+      rgba(142, 255, 231, 0.25),
+      rgba(253, 246, 246, 0.05));
   background-size: 400% 400%;
   mix-blend-mode: overlay;
   opacity: 0.35;
-  animation: borderPulse 10s ease-in-out infinite;
+  animation: borderPulse 6s ease-in-out infinite;
   pointer-events: none;
 }
 
 /* Hover — softer color blend, no zoom */
 section:not(header):hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(253, 252, 252, 0.12);
+  border-color: rgba(255, 241, 241, 0.35);
   box-shadow:
     0 0 40px rgba(161, 242, 255, 0.35),
     0 0 70px rgba(100, 80, 255, 0.25);
@@ -217,21 +224,17 @@ section:not(header):hover {
 }
 
 
-
-
-
-
         /* ===================================
            HEADER SECTION WITH GRADIENT
         =================================== */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #667eea 100%);
+            background: linear-gradient(135deg, #667eea 0%, #71459d 25%, #ec85f7 50%, #667eea 100%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             position: relative;
             overflow: hidden;
             padding: 0;
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 40px rgba(93, 117, 227, 0.3);
         }
 
         @keyframes gradientShift {
@@ -320,8 +323,8 @@ section:not(header):hover {
 
         /* Profile Photo Styling */
         .profile-photo {
-            width: 180px;
-            height: 180px;
+            width: 190px;
+            height: 190px;
             border-radius: var(--radius-full);
             border: 5px solid rgba(255, 255, 255, 0.9);
             object-fit: cover;
@@ -427,7 +430,7 @@ section:not(header):hover {
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(53, 52, 52, 0.05);
         }
 
         nav ul {
@@ -443,17 +446,23 @@ section:not(header):hover {
             margin: 0;
         }
 
-        nav a {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all var(--transition-normal);
-            font-size: 1em;
-            padding: var(--spacing-xs) var(--spacing-sm);
-            border-radius: var(--radius-sm);
-            position: relative;
-            display: inline-block;
-        }
+    nav a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    font-size: 1em;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    position: relative; 
+    display: inline-block;
+
+    /* Box shape styling */
+    background: rgba(212, 254, 255, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
 
         nav a::after {
             content: '';
@@ -468,10 +477,13 @@ section:not(header):hover {
             border-radius: var(--radius-sm);
         }
 
-        nav a:hover {
-            color: var(--secondary-purple);
-            background: rgba(139, 92, 246, 0.05);
-        }
+       /* Optional hover effect */
+nav a:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(156, 255, 192, 0.15);
+}
 
         nav a:hover::after {
             transform: translateX(-50%) scaleX(1);
@@ -535,24 +547,24 @@ section:not(header):hover {
         /* About Section Text Alignment */
 #about {
     position: relative;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 35px rgba(0, 180, 255, 0.2),
-                inset 0 0 20px rgba(255, 255, 255, 0.05);
+    background: rgba(252, 252, 252, 0.08);
+    /* backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%); */
+    border-radius: 10px;
+    border: 1px solid rgba(249, 238, 238, 0.25);
+    /* box-shadow: 0 0 35px rgba(236, 249, 255, 0.2),
+                inset 0 0 20px rgba(244, 244, 244, 0.08); */
     overflow: hidden;
     transition: background 1s ease, box-shadow 1s ease, border 0.6s ease;
     margin: 20px auto;
-    padding: 40px 0;
-    max-width: 1400px;
+    padding: 60px 0;
+    max-width: 1500px;
 }
 
 #about h2 {
     text-align: center;
     font-size: 2.8em;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     color: var(--primary-blue);
     position: relative;
     padding-bottom: var(--spacing-md);
@@ -564,9 +576,7 @@ section:not(header):hover {
 #about h2::after {
     content: '';
     position: absolute;
-    bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
     width: 100px;
     height: 5px;
     background: linear-gradient(90deg, var(--primary-blue), var(--secondary-cyan), var(--secondary-orange));
@@ -574,22 +584,30 @@ section:not(header):hover {
 }
 
 .about-content {
-    max-width: 95ch; /* Perfect reading line length (65-75 characters) */
+   
     margin: 0 auto;
     font-size: 1.15em;
-    line-height: 1.8; /* Optimal line height for readability */
+    line-height: 1.8; 
     color: var(--dark-secondary);
-    text-align: justify; /* Creates even line lengths */
-    text-justify: inter-word; /* Professional word spacing */
-    hyphens: auto; /* Automatic hyphenation for better line breaks */
+    text-align: justify; 
+    text-justify: inter-word; 
+    hyphens: auto; 
     padding: var(--spacing-xl);
     animation: fadeInUp 1s ease;
     font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 
                 'Segoe UI', system-ui, Roboto, sans-serif;
     font-weight: 400;
-    letter-spacing: -0.01em; /* Slightly tighter for professional look */
-    word-spacing: 0.03em; /* Balanced word spacing */
+    letter-spacing: -0.01em; 
+    word-spacing: 0.03em;
+
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
 }
+
 
 .about-content p {
     margin-bottom: var(--spacing-lg);
@@ -777,6 +795,8 @@ section:not(header):hover {
             transform: scale(1.05) translateY(-2px);
             box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
         }
+
+
 
         /* ===================================
            PUBLICATIONS SECTION
@@ -1027,6 +1047,8 @@ section:not(header):hover {
             margin-bottom: var(--spacing-md);
         }
 
+
+
         /* ===================================
            AWARDS GRID
         =================================== */
@@ -1087,7 +1109,7 @@ section:not(header):hover {
            FOOTER & CONTACT
         =================================== */
         footer {
-            background: linear-gradient(135deg, var(--dark-primary) 0%, #2d1b4e 100%);
+            background: linear-gradient(135deg, var(--dark-primary) 0%, #c0a5f4 100%);
             color: var(--white);
             text-align: center;
         }
@@ -1112,7 +1134,7 @@ section:not(header):hover {
         }
 
         .contact-item {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(251, 251, 251, 0.12);
             padding: var(--spacing-md);
             border-radius: var(--radius-md);
             backdrop-filter: blur(15px);
@@ -1187,35 +1209,146 @@ section:not(header):hover {
             }
         }
 
+/* ===================================
+           SUBSECTION DIVIDER
+        =================================== */
+        .subsection-divider {
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .subsection-divider h2 {
+            font-size: 2.2em;
+            margin-bottom: var(--spacing-xl);
+        }
+
         /* ===================================
-           RESPONSIVE DESIGN - TABLET
+           ANIMATIONS
+        =================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - LARGE DESKTOP
+        =================================== */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            section:not(header) {
+                max-width: 1500px;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - TABLET LANDSCAPE
+        =================================== */
+        @media (max-width: 1200px) {
+            :root {
+                --spacing-xl: 44px;
+                --spacing-2xl: 60px;
+                --spacing-3xl: 72px;
+            }
+
+            section:not(header) {
+                max-width: 95%;
+                margin: 8px auto;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - TABLET PORTRAIT
         =================================== */
         @media (max-width: 1024px) {
             :root {
+                font-size: 15px;
                 --spacing-xl: 40px;
                 --spacing-2xl: 56px;
                 --spacing-3xl: 64px;
             }
 
+            section:not(header) {
+                max-width: 96%;
+                padding: 35px 0;
+                margin: 6px auto;
+            }
+
             section h2 {
                 font-size: 2.4em;
+                margin-bottom: 30px;
             }
 
             header h1 {
                 font-size: 3em;
             }
 
-            .header-subtitle {
-                font-size: 1.2em;
+            header .subtitle {
+                font-size: 1.3em;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+
+            .header-wrapper {
+                padding: 50px 0;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         /* ===================================
-           RESPONSIVE DESIGN - MOBILE
+           RESPONSIVE DESIGN - MOBILE LANDSCAPE
+        =================================== */
+        @media (max-width: 900px) {
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 0.95em;
+                padding: 8px 14px;
+            }
+
+            .about-content {
+                max-width: 100%;
+                font-size: 1.1em;
+                padding: 25px;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - MOBILE PORTRAIT
         =================================== */
         @media (max-width: 768px) {
             :root {
-                font-size: 15px;
+                font-size: 14px;
+                --spacing-xs: 6px;
+                --spacing-sm: 12px;
                 --spacing-md: 16px;
                 --spacing-lg: 24px;
                 --spacing-xl: 32px;
@@ -1223,49 +1356,180 @@ section:not(header):hover {
                 --spacing-3xl: 48px;
             }
 
+            body {
+                line-height: 1.6;
+            }
+
+            section:not(header) {
+                max-width: 98%;
+                padding: 25px 0;
+                margin: 5px auto;
+                border-radius: 15px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
             header h1 {
-                font-size: 2.2em;
+                font-size: 2em;
+                margin-bottom: 12px;
+                letter-spacing: -0.5px;
             }
 
             header .subtitle {
-                font-size: 1.1em;
+                font-size: 1.05em;
+                margin-bottom: 8px;
             }
 
             header .location {
-                font-size: 1em;
+                font-size: 0.95em;
+                margin-bottom: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
 
             .profile-photo {
-                width: 140px;
-                height: 140px;
+                width: 130px;
+                height: 130px;
+                border: 4px solid rgba(255, 255, 255, 0.9);
             }
 
             .header-wrapper {
-                padding: var(--spacing-2xl) 0;
+                padding: 35px 0;
             }
 
             .header-content {
                 flex-direction: column;
-                gap: var(--spacing-md);
+                gap: 20px;
+                text-align: center;
             }
 
-            section {
-                padding: var(--spacing-xl) 0;
+            .header-text {
+                max-width: 100%;
             }
 
             section h2 {
-                font-size: 2em;
-                margin-bottom: var(--spacing-xl);
+                font-size: 1.9em;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+            }
+
+            section h2::after {
+                width: 80px;
+                height: 4px;
+            }
+
+            nav {
+                padding: 12px 0;
             }
 
             nav ul {
-                gap: var(--spacing-sm);
-                padding: 0 var(--spacing-sm);
+                gap: 8px;
+                padding: 0 10px;
             }
 
             nav a {
+                font-size: 0.85em;
+                padding: 6px 10px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .social-links a {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 20px;
                 font-size: 0.9em;
-                padding: 6px 12px;
+            }
+
+            .about-content {
+                font-size: 1em;
+                padding: 20px;
+                line-height: 1.7;
+                max-width: 100%;
+                text-align: justify;
+            }
+
+            .about-subsection-title {
+                font-size: 1.05em;
+                display: block;
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+
+            .about-subsection-content {
+                display: block;
+                margin-left: 0;
+            }
+
+            .timeline-item,
+            .publication-item,
+            .skill-category {
+                padding: 20px;
+                margin-bottom: 15px;
+                border-radius: 15px;
+            }
+
+            .timeline-item h3 {
+                font-size: 1.35em;
+                margin-bottom: 8px;
+            }
+
+            .timeline-item .position {
+                font-size: 1.05em;
+                margin-bottom: 8px;
+            }
+
+            .timeline-item .date {
+                font-size: 0.9em;
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+            }
+
+            .timeline-item p {
+                font-size: 0.95em;
+                line-height: 1.7;
+                margin-bottom: 12px;
+            }
+
+            .experience-image {
+                height: 180px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+            }
+
+            .credential-badge {
+                padding: 8px 16px;
+                font-size: 0.85em;
+                margin-top: 15px;
+            }
+
+            .publication-item h4 {
+                font-size: 1.15em;
+                line-height: 1.4;
+                margin-bottom: 12px;
+            }
+
+            .publication-item .authors,
+            .publication-item .venue {
+                font-size: 0.9em;
+                line-height: 1.6;
+            }
+
+            .pub-badge {
+                padding: 6px 14px;
+                font-size: 0.8em;
+                margin-bottom: 12px;
+            }
+
+            .pub-link {
+                font-size: 0.9em;
+                margin-top: 12px;
             }
 
             .projects-grid,
@@ -1273,27 +1537,113 @@ section:not(header):hover {
             .awards-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
 
-            .timeline-item,
-            .publication-item,
-            .skill-category {
-                padding: var(--spacing-md);
+            .project-card {
+                border-radius: 15px;
             }
 
-            .about-content {
-                font-size: 1.05em;
-                padding: var(--spacing-md);
+            .project-image {
+                height: 160px;
+                font-size: 3em;
             }
 
-            .social-links {
-                flex-direction: column;
-                width: 100%;
+            .project-content {
+                padding: 20px;
             }
 
-            .social-links a {
-                width: 100%;
-                justify-content: center;
+            .project-card h3 {
+                font-size: 1.25em;
+                margin-bottom: 10px;
+            }
+
+            .project-tools {
+                font-size: 0.85em;
+                margin-bottom: 12px;
+            }
+
+            .project-card p {
+                font-size: 0.95em;
+                line-height: 1.65;
+                margin-bottom: 12px;
+            }
+
+            .project-link {
+                font-size: 0.9em;
+            }
+
+            .skill-category h3 {
+                font-size: 1.15em;
+                margin-bottom: 15px;
+            }
+
+            .skill-category li {
+                padding: 8px 0;
+                font-size: 0.95em;
+            }
+
+            .skill-category p {
+                font-size: 0.95em;
+                line-height: 1.65;
+            }
+
+            .award-card {
+                padding: 25px;
+                border-radius: 15px;
+            }
+
+            .award-card h3 {
+                font-size: 1.25em;
+                margin-bottom: 12px;
+            }
+
+            .award-card .date {
+                font-size: 0.9em;
+                margin-bottom: 12px;
+            }
+
+            .award-card p {
+                font-size: 0.95em;
+                line-height: 1.65;
+            }
+
+            .subsection-divider {
+                margin-top: 35px;
+                margin-bottom: 30px;
+            }
+
+            .subsection-divider h2 {
+                font-size: 1.8em;
+                margin-bottom: 25px;
+            }
+
+            .contact-grid {
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+
+            .contact-item {
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            .contact-item a {
+                font-size: 0.95em;
+                gap: 10px;
+            }
+
+            footer {
+                padding: 35px 0;
+            }
+
+            footer h2 {
+                margin-bottom: 25px;
+            }
+
+            footer p {
+                margin-top: 25px;
+                font-size: 0.9em;
             }
         }
 
@@ -1302,72 +1652,271 @@ section:not(header):hover {
         =================================== */
         @media (max-width: 480px) {
             :root {
-                font-size: 14px;
+                font-size: 13px;
+                --spacing-xs: 5px;
+                --spacing-sm: 10px;
+                --spacing-md: 14px;
+                --spacing-lg: 20px;
+                --spacing-xl: 28px;
+            }
+
+            section:not(header) {
+                max-width: 99%;
+                padding: 20px 0;
+                margin: 4px auto;
+                border-radius: 12px;
             }
 
             .container {
-                padding: 0 var(--spacing-sm);
+                padding: 0 12px;
             }
 
             .header-wrapper {
-                padding: var(--spacing-xl) 0;
+                padding: 30px 0;
             }
 
             .profile-photo {
-                width: 120px;
-                height: 120px;
+                width: 110px;
+                height: 110px;
+                border: 3px solid rgba(255, 255, 255, 0.9);
             }
 
             header h1 {
-                font-size: 1.8em;
+                font-size: 1.7em;
+                margin-bottom: 10px;
+            }
+
+            header .subtitle {
+                font-size: 0.95em;
+                margin-bottom: 8px;
+            }
+
+            header .location {
+                font-size: 0.85em;
+                margin-bottom: 18px;
             }
 
             .social-links a {
                 font-size: 0.85em;
-                padding: 10px 18px;
+                padding: 10px 16px;
             }
 
             section h2 {
-                font-size: 1.8em;
+                font-size: 1.6em;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
             }
 
-            .timeline-item h3 {
-                font-size: 1.3em;
-            }
-
-            .project-card h3,
-            .skill-category h3,
-            .award-card h3 {
-                font-size: 1.2em;
-            }
-        }
-
-        /* ===================================
-           PRINT STYLES
-        =================================== */
-        @media print {
-            header {
-                background: none !important;
-                color: black !important;
-            }
-
-            .glass {
-                background: white !important;
-                border: 1px solid #ddd !important;
-                box-shadow: none !important;
+            section h2::after {
+                width: 60px;
+                height: 3px;
             }
 
             nav {
-                display: none;
+                padding: 10px 0;
             }
 
-            section {
-                page-break-inside: avoid;
+            nav ul {
+                gap: 6px;
+                padding: 0 8px;
+            }
+
+            nav a {
+                font-size: 0.8em;
+                padding: 5px 9px;
+            }
+
+            .about-content {
+                font-size: 0.95em;
+                padding: 15px;
+                line-height: 1.65;
+            }
+
+            .about-subsection-title {
+                font-size: 1em;
+                margin-bottom: 4px;
+                margin-top: 12px;
+            }
+
+            .timeline-item,
+            .publication-item,
+            .skill-category,
+            .award-card {
+                padding: 16px;
+                margin-bottom: 12px;
+                border-radius: 12px;
+            }
+
+            .timeline-item h3 {
+                font-size: 1.2em;
+                margin-bottom: 6px;
+            }
+
+            .timeline-item .position {
+                font-size: 1em;
+                margin-bottom: 6px;
+            }
+
+            .timeline-item .date {
+                font-size: 0.85em;
+                margin-bottom: 12px;
+            }
+
+            .timeline-item p {
+                font-size: 0.9em;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+
+            .experience-image {
+                height: 150px;
+                margin-bottom: 12px;
+            }
+
+            .credential-badge {
+                padding: 7px 14px;
+                font-size: 0.8em;
+                margin-top: 12px;
+            }
+
+            .publication-item h4 {
+                font-size: 1.05em;
+                margin-bottom: 10px;
+            }
+
+            .publication-item .authors,
+            .publication-item .venue {
+                font-size: 0.85em;
+            }
+
+            .pub-badge {
+                padding: 5px 12px;
+                font-size: 0.75em;
+            }
+
+            .project-image {
+                height: 140px;
+                font-size: 2.5em;
+            }
+
+            .project-content {
+                padding: 16px;
+            }
+
+            .project-card h3 {
+                font-size: 1.15em;
+                margin-bottom: 8px;
+            }
+
+            .project-tools {
+                font-size: 0.8em;
+                margin-bottom: 10px;
+            }
+
+            .project-card p {
+                font-size: 0.9em;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+
+            .skill-category h3 {
+                font-size: 1.05em;
+                margin-bottom: 12px;
+            }
+
+            .skill-category li {
+                padding: 7px 0;
+                font-size: 0.9em;
+            }
+
+            .skill-category li::before {
+                font-size: 1.2em;
+            }
+
+            .award-card h3 {
+                font-size: 1.15em;
+            }
+
+            .award-card .date,
+            .award-card p {
+                font-size: 0.9em;
+            }
+
+            .subsection-divider {
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+
+            .subsection-divider h2 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+
+            .contact-item {
+                padding: 12px;
+            }
+
+            .contact-item a {
+                font-size: 0.9em;
+                gap: 8px;
+            }
+
+            footer {
+                padding: 30px 0;
+            }
+
+            footer p {
+                font-size: 0.85em;
             }
         }
 
         /* ===================================
-           ACCESSIBILITY IMPROVEMENTS
+           RESPONSIVE DESIGN - EXTRA SMALL MOBILE
+        =================================== */
+        @media (max-width: 360px) {
+            :root {
+                font-size: 12px;
+            }
+
+            section:not(header) {
+                max-width: 100%;
+                padding: 18px 0;
+                margin: 3px auto;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                font-size: 0.75em;
+                padding: 4px 8px;
+            }
+
+            .timeline-item,
+            .publication-item,
+            .skill-category,
+            .award-card,
+            .project-content {
+                padding: 14px;
+            }
+        }
+
+        /* ===================================
+           ACCESSIBILITY & UTILITIES
         =================================== */
         a:focus,
         button:focus {
@@ -1385,9 +1934,6 @@ section:not(header):hover {
             }
         }
 
-        /* ===================================
-           CUSTOM SCROLLBAR
-        =================================== */
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -1405,22 +1951,17 @@ section:not(header):hover {
             background: linear-gradient(135deg, var(--primary-dark), var(--secondary-purple));
         }
 
-        /* ===================================
-           SELECTION STYLES
-        =================================== */
         ::selection {
             background: var(--primary-blue);
             color: var(--white);
         }
 
-        ::-moz-selection {
-            background: var(--primary-blue);
-            color: var(--white);
 
-        }
 
-        
-    </style>
+
+</style>
+
+    
 
 <body>
     <header>
@@ -1461,7 +2002,7 @@ section:not(header):hover {
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content glass">
-                <p>I am an aspiring academic with strong interests in machine learning, transformer architectures, medical AI, and IoT. I am dedicated to advancing research and delivering engaging teaching experiences. My goal is to inspire students through dynamic educational practices, interdisciplinary collaboration, and data-driven solutions to real-world challenges.Currently pursuing my Bachelor's degree in Computer Science and Engineering at PSTU, I have worked on multiple research projects involving IoT systems, machine learning, and healthcare applications. I am passionate about leveraging technology to solve practical problems.</p>
+                <p>I am an aspiring academic with strong interests in machine learning, transformer architectures, medical AI, IoT, and competitive programming. I am dedicated to advancing research and delivering engaging teaching experiences. My goal is to develop the world through dynamic educational practices, interdisciplinary collaboration, and data-driven solutions to real-world challenges. I have completed my Bachelor's degree in Computer Science and Engineering at PSTU. I have worked on multiple research projects involving IoT systems, machine learning, healthcare applications, and software development. I am passionate about leveraging technology, coding skills, and competitive programming experience to solve real-world problems and create meaningful impact.</p>
             </div>
         </div>
     </section>
@@ -1484,25 +2025,25 @@ section:not(header):hover {
             <h2>Professional Experience</h2>
             
             <div class="timeline-item">
-                <img src="assests/images/orbitronlab.jpg" alt="OrbitronLab Experience" class="experience-image" onerror="this.style.display='none'">
+                <img src="assests/images/water.jpeg" alt="OrbitronLab Experience" class="experience-image" onerror="this.style.display='none'">
                 <h3>OrbitronLab</h3>
                 <div class="position">IoT & ML Engineer</div>
                 <div class="date">January 2025 – Present | Patuakhali, Bangladesh</div>
                 <p>Visited villages across the Barisal Division to assess farmers' needs in fish farming automation and conduct requirement analyses. Developed a farmer-oriented mobile app integrated with sensor hardware, enhancing accessibility and minimizing manual monitoring. Designed prototypes including an AI-based fish health monitoring system and a smart helmet for rider safety.</p>
-                <a href="https://www.orbitronlab.com" class="credential-badge">🔗 View Certificate</a>
+                <a href="https://www.orbitronlab.com" class="credential-badge">🔗 View More</a>
             </div>
 
             <div class="timeline-item">
-                <img src="assests/images/rakib.jpg" alt="CSE Club Experience" class="experience-image" onerror="this.style.display='none'">
+                <img src="assests/images/abc.png" alt="CSE Club Experience" class="experience-image" onerror="this.style.display='none'">
                 <h3>CSE Club, PSTU</h3>
                 <div class="position">IoT & ML Instructor</div>
                 <div class="date">March 2025 – Present | Patuakhali, Bangladesh</div>
                 <p>Conducted classes on IoT and basic machine learning using NumPy and Pandas, enabling students to gain hands-on skills in data-driven technologies.</p>
-                <a href="#" class="credential-badge">🔗 View Certificate</a>
+                <a href="#" class="credential-badge">🔗 View More</a>
             </div>
 
             <div class="timeline-item">
-                <img src="assests/images/fish-farm.jpg" alt="Smart Fish Farming Project" class="experience-image" onerror="this.style.display='none'">
+                <img src="assests/images/bc.png" alt="Smart Fish Farming Project" class="experience-image" onerror="this.style.display='none'">
                 <h3>Smart Fish Farming (RTC)</h3>
                 <div class="position">Project Associate</div>
                 <div class="date">April 2025 – Present | PSTU, Bangladesh</div>
@@ -1653,28 +2194,29 @@ section:not(header):hover {
                     </ul>
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 60px;">
-                <h2 style="font-size: 2.2em; margin-bottom: 40px;">Problem Solving</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Codeforces</h3>
-                        <p>Solved 500+ problems demonstrating strong analytical thinking and algorithmic design.</p>
-                        <a href="https://codeforces.com/profile/abdurrakib" target="_blank" class="pub-link">View Profile →</a>
-                    </div>
-                    <div class="skill-category">
-                        <h3>LeetCode</h3>
-                        <p>Solved 100+ problems showcasing expertise in data structures and optimization.</p>
-                        <a href="#" target="_blank" class="pub-link">View Profile →</a>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Competitive Programming</h3>
-                        <p>IUPC (NWU) participant • PSTU IT Carnival 14th rank out of 200 teams.</p>
-                    </div>
-                </div>
+     <section id="problem-solving">
+    <div class="container">
+        <h2>Problem Solving</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Codeforces</h3>
+                <p>Solved 500+ problems demonstrating strong analytical thinking and algorithmic design.</p>
+                <a href="https://codeforces.com/profile/abdurrakib" target="_blank" class="pub-link">View Profile →</a>
+            </div>
+            <div class="skill-category">
+                <h3>LeetCode</h3>
+                <p>Solved 100+ problems showcasing expertise in data structures and optimization.</p>
+                <a href="#" target="_blank" class="pub-link">View Profile →</a>
+            </div>
+            <div class="skill-category">
+                <h3>Competitive Programming</h3>
+                <p>IUPC (NWU) participant • PSTU IT Carnival 14th rank out of 200 teams.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="awards">
         <div class="container">
@@ -1692,35 +2234,38 @@ section:not(header):hover {
                     <p>National Government Quiz Competition - demonstrated strong analytical thinking and AI-specific knowledge.</p>
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 60px;">
-                <h2 style="font-size: 2.2em; margin-bottom: 40px;">Leadership & Volunteering</h2>
-                <div class="timeline-item">
-                    <h3>President - Pirojpur Student Welfare Association</h3>
-                    <div class="date">January 2024 - Present</div>
-                    <p>Led initiatives to support student welfare, organize community activities, and enhance student engagement.</p>
-                </div>
 
-                <div class="timeline-item">
-                    <h3>Vice President - CSE Club, PSTU</h3>
-                    <div class="date">January 2024 - April 2025</div>
-                    <p>Organized research webinars, workshops, hackathons, programming contests, and IT quizzes to guide students on academic opportunities and technical skills development.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Program Organizer - National High School Programming Contest 2025</h3>
-                    <div class="date">May 2025 - June 2025</div>
-                    <p>Designed problems and evaluated answer scripts, coordinated participants for Senior Category.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Co-Founder - PSTU Language Club</h3>
-                    <div class="date">September 2024 - Present</div>
-                    <p>Established university-based language learning community to enhance communication and cultural exchange.</p>
-                </div>
-            </div>
+     <section id="leadership">
+    <div class="container">
+        <h2>Leadership & Volunteering</h2>
+        
+        <div class="timeline-item">
+            <h3>President - Pirojpur Student Welfare Association</h3>
+            <div class="date">January 2024 - Present</div>
+            <p>Led initiatives to support student welfare, organize community activities, and enhance student engagement.</p>
         </div>
-    </section>
+
+        <div class="timeline-item">
+            <h3>Vice President - CSE Club, PSTU</h3>
+            <div class="date">January 2024 - April 2025</div>
+            <p>Organized research webinars, workshops, hackathons, programming contests, and IT quizzes to guide students on academic opportunities and technical skills development.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Program Organizer - National High School Programming Contest 2025</h3>
+            <div class="date">May 2025 - June 2025</div>
+            <p>Designed problems and evaluated answer scripts, coordinated participants for Senior Category.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Co-Founder - PSTU Language Club</h3>
+            <div class="date">September 2024 - Present</div>
+            <p>Established university-based language learning community to enhance communication and cultural exchange.</p>
+        </div>
+    </div>
+</section>
 
     <footer id="contact">
         <div class="container">
@@ -1751,10 +2296,3 @@ section:not(header):hover {
 </body>
 
 </html>
-
-
-
-
-
-
-

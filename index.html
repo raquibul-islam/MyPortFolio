@@ -530,7 +530,112 @@ section:not(header):hover {
         /* ===================================
            ABOUT SECTION
         =================================== */
-        #about {
+
+
+        /* About Section Text Alignment */
+#about {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 35px rgba(0, 180, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: background 1s ease, box-shadow 1s ease, border 0.6s ease;
+    margin: 20px auto;
+    padding: 40px 0;
+    max-width: 1400px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+    font-weight: 800;
+    animation: fadeInUp 0.8s ease;
+    max-width: none; /* Allow full width for heading */
+}
+
+#about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-cyan), var(--secondary-orange));
+    border-radius: var(--radius-sm);
+}
+
+.about-content {
+    max-width: 65ch; /* Perfect reading line length (65-75 characters) */
+    margin: 0 auto;
+    font-size: 1.15em;
+    line-height: 1.8; /* Optimal line height for readability */
+    color: var(--dark-secondary);
+    text-align: justify; /* Creates even line lengths */
+    text-justify: inter-word; /* Professional word spacing */
+    hyphens: auto; /* Automatic hyphenation for better line breaks */
+    padding: var(--spacing-xl);
+    animation: fadeInUp 1s ease;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', system-ui, Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em; /* Slightly tighter for professional look */
+    word-spacing: 0.03em; /* Balanced word spacing */
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    orphans: 3; /* Prevent single words on last line */
+    widows: 3; /* Prevent single words on first line of new column/page */
+}
+
+/* Enhanced glass effect for about section */
+#about::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%,
+        rgba(200, 239, 250, 0.18) 0%,
+        rgba(120, 100, 255, 0.12) 30%,
+        transparent 70%);
+    animation: glassFloat 18s ease-in-out infinite;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg,
+        rgba(166, 236, 255, 0.25),
+        rgba(120, 80, 255, 0.2),
+        rgba(146, 255, 231, 0.25),
+        rgba(255, 255, 255, 0.05));
+    background-size: 400% 400%;
+    mix-blend-mode: overlay;
+    opacity: 0.35;
+    animation: borderPulse 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+
+
+        
+        /* #about {
 
             background: rgba(255, 255, 255, 0.25);
         }
@@ -550,7 +655,7 @@ section:not(header):hover {
         .about-content p {
             margin-bottom: var(--spacing-md);
             text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-        }
+        } */
 
         /* ===================================
            TIMELINE ITEM STYLES
@@ -1646,6 +1751,7 @@ section:not(header):hover {
 </body>
 
 </html>
+
 
 
 
